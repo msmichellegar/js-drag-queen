@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('drag_queens', 'nodeconf', 'argentina', {
-  host: 'localhost',
+const sequelize = new Sequelize(process.env.PG_URL, {
   dialect: 'postgres',
   pool: { max: 5, min: 0, idle: 10000 }
 });

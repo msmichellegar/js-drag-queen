@@ -8,6 +8,9 @@ function ready () {
   const button = document.querySelector('button');
 
   button.addEventListener('click', function () {
+    const nameElement = document.querySelector('#drag-name');
+    nameElement.innerText = 'Thinking...';
+
     fetch('/generate', {
       method: 'GET'
     })
